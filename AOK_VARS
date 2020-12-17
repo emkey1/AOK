@@ -2,11 +2,11 @@
 
 # Usefull variables
 ALPINE_VERSION=3.12.1
-AOK_VERSION="ALPHA69"
-AOK_VERSION_SHORT="A69"
+AOK_VERSION="ALPHA70"
+AOK_VERSION_SHORT="A70"
 
 # APK's that get installed on image build and impact image size
-CORE_APKS='openssh openssh-doc openrc openrc-doc zsh bash tmux tmux-doc git curl openssl-dev mandoc man-pages shadow shadow-doc sudo busybox-extras mosh mosh-doc fortune fortune-doc tzdata-doc elinks elinks-doc dcron dcron-doc dcron-openrc vim vim-doc nano ssl_client ncftp ncftp-doc coreutils coreutils-doc findutils findutils-doc tar ncurses ncurses-doc file less less-doc'
+CORE_APKS='openssh openssh-doc openrc openrc-doc zsh bash tmux tmux-doc git curl openssl-dev mandoc man-pages shadow shadow-doc sudo busybox-extras mosh mosh-doc fortune fortune-doc tzdata-doc elinks elinks-doc dcron dcron-doc dcron-openrc vim vim-doc nano ssl_client ncftp ncftp-doc coreutils coreutils-doc findutils findutils-doc tar tar-doc ncurses ncurses-doc file less less-doc sed sed-doc gawk gawk-doc grep grep-doc'
 
 VNC_APKS='x11vnc x11vnc-doc xvfb xterm xorg-server xf86-video-dummy i3wm i3status i3lock xdpyinfo xdpyinfo-doc i3wm-doc i3lock-doc i3status-doc ttf-dejavu'
 
@@ -14,4 +14,4 @@ VNC_APKS='x11vnc x11vnc-doc xvfb xterm xorg-server xf86-video-dummy i3wm i3statu
 # I plan on changing these over to packages of like things at some point
 BLOAT1_APKS='python3 py3-pip python3-dev build-base strace strace-doc'
 BLOAT2_APKS='nodejs nodejs-dev'
-BLOAT3_APKS='emacs go apache2 apache2-doc apache2-ssl'
+BLOAT3_APKS='emacs go'

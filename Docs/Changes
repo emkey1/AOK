@@ -92,11 +92,12 @@ Alpha Series
          o .bash_profile for both ish and root is now also linked to .bashrc
 .70   o Time to provide upgrade path
          o Fixed stale lock 'bug' with vnc_start
-         o Image will now include a /iCloud directory and encourage people
-           to mount it via a 'iCloud' script
 	 o Added apt wrapper in previous release, documenting here.  It just
 	   gives some info on basic apk commands
          o Added two scripts to start tmux and open panes.  'ipad_tmux' and 
 	   'iphone_tmux'
          o Started work on a backup and restore setup to make upgrades easier
+           Deferred until next release
+         o Removed apache from bloat level 3
+	 o Added sed, sed-doc, gawk and gawk-doc, tar-doc to base install
 

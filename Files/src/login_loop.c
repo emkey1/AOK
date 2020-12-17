@@ -9,14 +9,6 @@
  *  system would do
  */
 
-int main( void ) {
-   while(1) {
-      mylogin();
-   }
-
-   return 0;
-
-}
 
 int mylogin( void ) {
 
@@ -30,7 +22,19 @@ int mylogin( void ) {
       execvp( "/bin/login.real", argv );
    }
 
-   /* Put the parent to sleep for 2 seconds--let the child finished executing */
-   wait( 2 );
+   /* Put the parent to sleep for 2 seconds--let the child finish executing */
+   int *w;
+   *w = 2;
+
+   wait( w );
+
+}
+
+int main( void ) {
+   while(1) {
+      mylogin();
+   }
+
+   return 0;
 
 }

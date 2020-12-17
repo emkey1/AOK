@@ -19,7 +19,9 @@ int main( void ) {
    }
 
    /* Put the parent to sleep for 2 seconds--let the child finished executing */
-   wait( 2 );
+   int *w;
+   *w = 2;
+   wait( w );
 
    return 0;
 

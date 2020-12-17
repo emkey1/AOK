@@ -152,7 +152,7 @@ chmod 777 /dev/null
 # to exit on shell termination instead
 #pushd .
 #cd Files/login
-cp Files/login/login_* Files
+#cp Files/login/login_* Files
 #popd
 
 mv /bin/login /bin/login.real
