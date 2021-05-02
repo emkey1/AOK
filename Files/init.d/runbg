@@ -1,0 +1,21 @@
+#!/sbin/openrc-run
+
+description="Run daemon that reduces the odds that iSH will be killed when running in the background"
+
+depend() {
+   after clock
+}
+
+start() {
+   echo "Starting runbg"
+   start-stop-daemon --background --start --exec /usr/local/sbin/runbg  \
+    --make-pidfile --pidfile /run/runbg.pid
+   eend $?
+}
+
+stop() {
+   echo "Stopping runbg"
+   start-stop-daemon --stop --exec /usr/local/sbin/runbg \
+   --pidfile /home/user/myApp.pid
+   eend $?
+}

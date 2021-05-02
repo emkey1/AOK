@@ -63,6 +63,10 @@ echo "Archiving root fs image"
 
 tar cf - . | gzip -9 > ../ALPINE_$ALPINE_VERSION-iSH-AOK_$AOK_VERSION.tgz
 
+echo
+
 echo "Archiving root fs image complete"
+
+cp /tmp/AOK/ALPINE_$ALPINE_VERSION-iSH-AOK_$AOK_VERSION.tgz /mnt/AOK
 
 rm BUILD_DONE # We're done, leaving around would be counter productive
