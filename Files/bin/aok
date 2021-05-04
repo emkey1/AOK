@@ -17,13 +17,13 @@ usage() {
   cat <<EOF
 Usage: $(basename "${BASH_SOURCE[0]}") [-h] [-v] [-f] -p param_value arg1 [arg2...]
 
-Script description here.
+Modify various things about how AOK operates.
 
 Available options:
 
 -h, --help      Print this help and exit
 -v, --verbose   Print script debug info
--p, --param     login [single|disabe|enable]
+-p, --param     login [single|disable|enable]
 EOF
 #-f, --flag      Some flag description
   exit

@@ -134,5 +134,10 @@ Alpha Series
 	  image
         o login.loop and login.once now read /etc/aok_release and include 
 	  version in login prompt
-.85a   In progress
-        o Added linux-headers apk to the core install
+.85.1   Bug Fix Release
+        o Added linux-headers apk to the bloat 1 install
+	o Fixed the iCloud script
+	o Changed chroot_build_image to write stuff to /iCloud
+	o Updated AOK_VARS to reflect new version
+        o Moved strace stuff in bloat from bloat level 1 to the aok group
+	o Fixed typo in aok usage() and updated boilerplate text to be mildly descriptive
