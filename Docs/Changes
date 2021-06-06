@@ -141,3 +141,20 @@ Alpha Series
 	o Updated AOK_VARS to reflect new version
         o Moved strace stuff in bloat from bloat level 1 to the aok group
 	o Fixed typo in aok usage() and updated boilerplate text to be mildly descriptive
+	o Change the ish user to be uid 501
+	o Fix 'aok' script usage info to reflect 'once' rather that single for 
+	  the exit on exit option
+	o Fix bloat package options to be a bit cleaner
+.85.2   More Bug fixes
+        o Shorten welcome message in login* binaries to fit on iPhone screen
+          by removing the word 'root'
+.85.3   Tweaks
+        o Added cmake to 'bloat 1', added -doc files for 'bloat aok'
+        o Now using @jaclu's bgrun script rather than runbg (https://github.com/jaclu/spd/blob/main/files/bgrun)
+.85.4	Tweaks
+	o For iSH-AOK I added procps and htop to the root fs.  This "fixes" and issue
+          in the busybox uptime command that causes bogus uptime to be reported.  To 
+          be clear, it dosn't fix busybox itself but rather replaces the uptime command
+          from busybox with the one from procps.  Adding htop because it is nice and I 
+          wanted to.  Note that neither works on mainline iSH as of the time this note
+          was written

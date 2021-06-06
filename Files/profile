@@ -10,6 +10,12 @@ if [[ -e /etc/FIRSTBOOT ]]; then
    sudo rm /dev/null > /tmp/profile.debug 2>&1
    sudo mknod /dev/null c 1 3 >> /tmp/profile.debug 2>&1
    sudo chmod 666 /dev/null >> /tmp/profile.debug 2>&1
+   # Start a couple of services
+   sudo rc-update add dcron
+   sudo rc-update add runbg
+   sudo rc-service dcron start
+   sudo rc-service runbg start
+
    sudo rm /etc/FIRSTBOOT # Only do this stuff once, so remove the file now
 fi
 

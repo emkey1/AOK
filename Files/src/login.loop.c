@@ -37,7 +37,7 @@ int mylogin( void ) {
     int pid = fork();
 
     if ( pid == 0 ) {
-       printf("Welcome to the AOK iSH root filesystem (%s)\n\n",version);
+       printf("Welcome to the AOK iSH filesystem (%s)\n\n",version);
        printf("Default login is [36m 'ish'[0m\n\n");
        execvp( "/bin/login.alpine", argv );
     }

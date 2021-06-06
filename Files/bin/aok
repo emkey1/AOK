@@ -6,7 +6,7 @@
 # 
 # The Rest is the fault of mke
 #
-# Version .85
+# Version .86
 
 set -Eeuo pipefail
 trap cleanup SIGINT SIGTERM ERR EXIT
@@ -17,13 +17,13 @@ usage() {
   cat <<EOF
 Usage: $(basename "${BASH_SOURCE[0]}") [-h] [-v] [-f] -p param_value arg1 [arg2...]
 
-Modify various things about how AOK operates.
+An AOK-only script that manages iSH/AOK specific things.
 
 Available options:
 
 -h, --help      Print this help and exit
 -v, --verbose   Print script debug info
--p, --param     login [single|disable|enable]
+-p, --param     login [once|disable|enable]
 EOF
 #-f, --flag      Some flag description
   exit

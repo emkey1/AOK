@@ -94,9 +94,10 @@ cp AOK_VARS /usr/local/etc
 chmod +x /usr/local/bin/*
 
 echo
-echo "Creating the ish user"
+echo "Creating the ish user and group"
 
-useradd -s /bin/bash ish
+groupadd -g 501 ish
+useradd -s /bin/bash -u 501 -g 501 ish
 
 # For some reason useradd doesn't create the home dir?
 mkdir -p /home/ish
@@ -138,7 +139,7 @@ chmod 777 /dev/null
 # Let's bypass login to implement a more traditional login 
 # experience.  By default the login wrapper will loop, meaning
 # Another login prompt will be issued on exit.
-# login_single can be copied to /bin/login to cause iSH
+# login.once can be copied to /bin/login to cause iSH
 # to exit on shell termination instead
 #pushd .
 #cd Files/login
@@ -192,14 +193,13 @@ openrc-init
 
 echo
 
-echo "Enabling openrc run services"
-
+# Moved the service stuff to /etc/profile via /etc/FIRSTBOOT
+#echo "Enabling openrc run services"
 # Enable dcron (Doesn't actually stick for some reason)
 #rc-update add syslog-ng
-rc-update add dcron
-
+#rc-update add dcron
 # Daemon to reduce odds of ish getting killed when running in the background
-rc-update add runbg
+#rc-update add runbg
 
 echo "Creating First Boot File in /etc"
 
