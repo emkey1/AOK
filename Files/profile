@@ -5,27 +5,22 @@
 # First we do stuff that only needs to happen when the root image
 # is booted for the first time
 if [[ -e /etc/FIRSTBOOT ]]; then
-   # /dev/null gets screwed uf at times.  Recreate.  This may only
-   # need to be done once.  Need to test
+   # /dev/null gets screwed up at times.  Recreate just in case
+   # the first time we boot
    sudo rm /dev/null > /tmp/profile.debug 2>&1
    sudo mknod /dev/null c 1 3 >> /tmp/profile.debug 2>&1
    sudo chmod 666 /dev/null >> /tmp/profile.debug 2>&1
    # Start a couple of services
    sudo rc-update add dcron
    sudo rc-update add runbg
-   sudo rc-service dcron start
-   sudo rc-service runbg start
+#   sudo rc-service dcron restart
+#   sudo rc-service runbg restart
 
    sudo rm /etc/FIRSTBOOT # Only do this stuff once, so remove the file now
 fi
 
 # Let's set the path here since that covers both zsh and bash
 export PATH=/usr/local/bin:/bin:/usr/bin:/usr/sbin:/sbin:/usr/local/games
-
-# Start the process that marginally reduces the chances of iSH
-# Getting killed while running in the background
-# Deprecated
-#/usr/local/bin/rbg
 
 CHECK=`/bin/rc-status 2> /dev/null | grep sshd | wc -l`
 

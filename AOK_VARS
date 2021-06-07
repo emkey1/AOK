@@ -2,14 +2,14 @@
 
 # Usefull variables
 ALPINE_VERSION=3.12.1
-AOK_VERSION="ALPHA_85.4"
-AOK_VERSION_SHORT="AOK_85.4"
-#AOK_VERSION="ALPHA_85.4A"
-#AOK_VERSION_SHORT="A_85.4A"
+#AOK_VERSION="ALPHA_85.4"
+#AOK_VERSION_SHORT="AOK_85.4"
+AOK_VERSION="ALPHA_85.4A"
+AOK_VERSION_SHORT="A_85.4A"
 
 # APK's that get installed on image build and impact image size
-CORE_APKS='openssh openrc zsh bash tmux git curl openssl-dev shadow sudo busybox-extras mosh fortune elinks dcron dcron-openrc vim nano ssl_client ncftp coreutils findutils tar ncurses-dev ncurses file less sed gawk grep util-linux tzdata'
-#CORE_APKS='openssh openrc zsh bash tmux git curl openssl-dev shadow sudo busybox-extras mosh fortune elinks dcron dcron-openrc vim nano ssl_client ncftp coreutils findutils tar ncurses-dev ncurses file less sed gawk grep util-linux tzdata htop procps strace strace-doc procps-doc strace-doc htop-doc'
+#CORE_APKS='openssh openrc zsh bash tmux git curl openssl-dev shadow sudo busybox-extras mosh fortune elinks dcron dcron-openrc vim nano ssl_client ncftp coreutils findutils tar ncurses-dev ncurses file less sed gawk grep util-linux tzdata'
+CORE_APKS='openssh openrc zsh bash tmux git curl openssl-dev shadow sudo busybox-extras mosh fortune elinks dcron dcron-openrc vim nano ssl_client ncftp coreutils findutils tar ncurses-dev ncurses file less sed gawk grep util-linux tzdata htop procps strace strace-doc procps-doc strace-doc htop-doc'
 
 VNC_APKS='x11vnc x11vnc-doc xvfb xterm xorg-server xf86-video-dummy i3wm i3status i3lock xdpyinfo xdpyinfo-doc i3wm-doc i3lock-doc i3status-doc ttf-dejavu'
 
